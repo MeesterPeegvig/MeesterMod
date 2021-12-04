@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
-  "version": "${version}",
-  "mcversion": "${mcversion}",
-  "url": "",
-  "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "modid": "meestermod",
+  "name": "MeesterMod",
+  "description": "MeesterPeegvig's Minecraft Mod",
+  "version": "1.0",
+  "mcversion": "1.8.9",
+  "url": "https://github.com/MeesterPeegvig/MeesterMod",
+  "updateUrl": "https://github.com/MeesterPeegvig/MeesterMod",
+  "authorList": ["MeesterPeegvig"],
+  "credits": "MeesterPeegvig",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
