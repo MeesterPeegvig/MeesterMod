@@ -17,4 +17,11 @@ public class MeesterModEventHandler {
 
         }
     }
+    @SubscribeEvent
+    public void ClientChatRecieved(ClientChatReceivedEvent event){
+        if (event.message.equals("gg")){
+            System.out.println("Wholesome :D");
+
+        }
+    }
 }

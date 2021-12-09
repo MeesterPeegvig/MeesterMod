@@ -18,16 +18,16 @@ public class MeesterMod {
     @SidedProxy(clientSide = "usa.co.MeesterPeegvig.meestermod.proxy.ClientProxy", serverSide = "usa.co.MeesterPeegvig.meestermod.proxy.CommonProxy")
     public static CommonProxy proxy;
 
-    @Mod.Instance
-    public static MeesterMod instance;
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event){
+
         proxy.preInit(event);
     }
 
     @EventHandler
     public void init(FMLInitializationEvent event){
+
         proxy.init(event);
     }
 
