@@ -36,12 +36,15 @@ public class MeesterModEventHandler {
     public void ClientChatRecieved(ClientChatReceivedEvent event) {
         String chatMsg = event.message.getUnformattedText();
         String gg = "gg";
-        System.out.println("chatMSG :: " + chatMsg);
-        System.out.println("gg :: " + gg);
-        System.out.println(chatMsg.equals(gg));
-        if (chatMsg.equals(gg)) {
-            System.out.println("in If :D");
-            getMinecraft().thePlayer.sendChatMessage("Wholesome :D");
+        System.out.println(chatMsg);
+        int indexOfOpenBracket =chatMsg.indexOf("[");
+        int indexOfCloseBracket =chatMsg.indexOf("]");
+        //String chatMsgSender = chatMsg.substring(indexOfOpenBracket+1,indexOfCloseBracket);
+        String parsedChatMsg = chatMsg.substring(indexOfCloseBracket+2);
+        System.out.println(parsedChatMsg);
+        //System.out.println(chatMsgSender);
+        if (parsedChatMsg.equals(gg)) {
+            getMinecraft().thePlayer.sendChatMessage("Good game to you too!");
         }
     }
 
