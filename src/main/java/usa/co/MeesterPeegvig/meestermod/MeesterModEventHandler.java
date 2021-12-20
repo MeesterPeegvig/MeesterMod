@@ -43,6 +43,7 @@ public class MeesterModEventHandler {
         String parsedChatMsg = chatMsg.substring(indexOfCloseBracket+2);
         System.out.println(parsedChatMsg);
         //System.out.println(chatMsgSender);
+        // fix error with out of index
         if (parsedChatMsg.equals(gg)) {
             getMinecraft().thePlayer.sendChatMessage("Good game to you too!");
         }
