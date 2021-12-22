@@ -33,7 +33,7 @@ public class MeesterModEventHandler {
     }
 
     @SubscribeEvent
-    public void ClientChatRecieved(ClientChatReceivedEvent event) {
+    public void ClientChatReceived(ClientChatReceivedEvent event) {
         String chatMsg = event.message.getUnformattedText();
         String gg = "gg";
         System.out.println(chatMsg);
