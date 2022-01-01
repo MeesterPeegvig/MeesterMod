@@ -23,6 +23,7 @@ public class MeesterModEventHandler {
 
     EntityPlayer myPlayer = Minecraft.getMinecraft().thePlayer;
 
+    // Gives player iron axe upon world entry
     @SubscribeEvent
     public void entityJoinWorld(EntityJoinWorldEvent event) {
         if (event.entity instanceof EntityPlayer) {
@@ -32,6 +33,7 @@ public class MeesterModEventHandler {
         }
     }
 
+    // Scans and sends chat message accordingly
     @SubscribeEvent
     public void ClientChatReceived(ClientChatReceivedEvent event) {
         String chatMsg = event.message.getUnformattedText();
@@ -48,9 +50,11 @@ public class MeesterModEventHandler {
         System.out.println(chatMsgSender);
         // fix error with out of index
         if (parsedChatMsg.equals(gg)) {
-            getMinecraft().thePlayer.sendChatMessage("Good game to you too!");
+            getMinecraft().thePlayer.sendChatMessage("gg");
         }
     }
+
+    // Lights player on fire when holding apple
     @SubscribeEvent
     public void livingUpdate(LivingEvent.LivingUpdateEvent event) {
         if (event.entity instanceof EntityPlayer) {
