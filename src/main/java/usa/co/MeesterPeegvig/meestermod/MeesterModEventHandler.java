@@ -38,19 +38,19 @@ public class MeesterModEventHandler {
     public void ClientChatReceived(ClientChatReceivedEvent event) {
         String chatMsg = event.message.getUnformattedText();
         String gg = "gg";
+        String lessThan = "<";
         System.out.println(chatMsg);
-        int indexOfCloseBracket =chatMsg.indexOf("]");
+        int indexOfCloseBracket = chatMsg.indexOf("]");
         if (indexOfCloseBracket == -1) {
             indexOfCloseBracket = chatMsg.indexOf(">");
         }
         System.out.println(indexOfCloseBracket);
-        String chatMsgSender = chatMsg.substring(1,indexOfCloseBracket);
-        String parsedChatMsg = chatMsg.substring(indexOfCloseBracket+2);
+        String chatMsgSender = chatMsg.substring(1, indexOfCloseBracket);
+        String parsedChatMsg = chatMsg.substring(indexOfCloseBracket + 2);
         System.out.println(parsedChatMsg);
         System.out.println(chatMsgSender);
-        // fix error with out of index
-        if (parsedChatMsg.equals(gg)) {
-            getMinecraft().thePlayer.sendChatMessage("gg");
+        if ((parsedChatMsg.equals(gg)) && !(chatMsg.substring(0,1).equals(lessThan))) {
+            getMinecraft().thePlayer.sendChatMessage("Good Game to you too, " + chatMsgSender + "!");
         }
     }
 
