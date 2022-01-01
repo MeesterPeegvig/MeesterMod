@@ -38,7 +38,7 @@ public class MeesterModEventHandler {
         String gg = "gg";
         String parsedChatMsg = chatMsg.substring(4); // hard coded for command block only
         if (parsedChatMsg.equals(gg)) {
-            getMinecraft().thePlayer.sendChatMessage("Good game to you too!");
+            getMinecraft().thePlayer.sendChatMessage("gg");
         }
     }
 
