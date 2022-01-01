@@ -40,7 +40,7 @@ public class MeesterModEventHandler {
         int indexOfOpenBracket =chatMsg.indexOf("[");
         int indexOfCloseBracket =chatMsg.indexOf("]");
         //String chatMsgSender = chatMsg.substring(indexOfOpenBracket+1,indexOfCloseBracket);
-        String parsedChatMsg = chatMsg.substring(indexOfCloseBracket+2);
+        String parsedChatMsg = chatMsg.substring(indexOfCloseBracket+3);
         System.out.println(parsedChatMsg);
         //System.out.println(chatMsgSender);
         // fix error with out of index
