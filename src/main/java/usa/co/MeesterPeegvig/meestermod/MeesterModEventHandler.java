@@ -36,12 +36,21 @@ public class MeesterModEventHandler {
     public void ClientChatReceived(ClientChatReceivedEvent event) {
         String chatMsg = event.message.getUnformattedText();
         String gg = "gg";
-        String parsedChatMsg = chatMsg.substring(4); // hard coded for command block only
+        System.out.println(chatMsg);
+        int indexOfCloseBracket =chatMsg.indexOf("]");
+        if (indexOfCloseBracket == -1) {
+            indexOfCloseBracket = chatMsg.indexOf(">");
+        }
+        System.out.println(indexOfCloseBracket);
+        String chatMsgSender = chatMsg.substring(1,indexOfCloseBracket);
+        String parsedChatMsg = chatMsg.substring(indexOfCloseBracket+2);
+        System.out.println(parsedChatMsg);
+        System.out.println(chatMsgSender);
+        // fix error with out of index
         if (parsedChatMsg.equals(gg)) {
             getMinecraft().thePlayer.sendChatMessage("Good game to you too!");
         }
     }
-
     @SubscribeEvent
     public void livingUpdate(LivingEvent.LivingUpdateEvent event) {
         if (event.entity instanceof EntityPlayer) {
