@@ -24,14 +24,14 @@ public class MeesterModEventHandler {
     EntityPlayer myPlayer = Minecraft.getMinecraft().thePlayer;
 
     // Gives player iron axe upon world entry
-    @SubscribeEvent
-    public void entityJoinWorld(EntityJoinWorldEvent event) {
-        if (event.entity instanceof EntityPlayer) {
-            EntityPlayer player = (EntityPlayer) event.entity;
-            player.inventory.addItemStackToInventory(new ItemStack(Items.iron_axe));
-
-        }
-    }
+//    @SubscribeEvent
+//    public void entityJoinWorld(EntityJoinWorldEvent event) {
+//        if (event.entity instanceof EntityPlayer) {
+//            EntityPlayer player = (EntityPlayer) event.entity;
+//            player.inventory.addItemStackToInventory(new ItemStack(Items.iron_axe));
+//
+//        }
+//    }
 
     // Scans and sends chat message accordingly
     @SubscribeEvent
@@ -55,15 +55,15 @@ public class MeesterModEventHandler {
     }
 
     // Lights player on fire when holding apple
-    @SubscribeEvent
-    public void livingUpdate(LivingEvent.LivingUpdateEvent event) {
-        if (event.entity instanceof EntityPlayer) {
-            EntityPlayer player = (EntityPlayer) event.entity;
-            if (player.getHeldItem() != null) {
-                if (player.getHeldItem().getItem() == Items.apple) {
-                    player.setFire(5);
-                }
-            }
-        }
-    }
+//    @SubscribeEvent
+//    public void livingUpdate(LivingEvent.LivingUpdateEvent event) {
+//        if (event.entity instanceof EntityPlayer) {
+//            EntityPlayer player = (EntityPlayer) event.entity;
+//            if (player.getHeldItem() != null) {
+//                if (player.getHeldItem().getItem() == Items.apple) {
+//                    player.setFire(5);
+//                }
+//            }
+//        }
+//    }
 }
